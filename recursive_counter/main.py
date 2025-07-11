@@ -7,14 +7,11 @@ def countdown(n):
 def run_countdown_program():
     while True:
         num_str = input("Enter a non-negative number to start countdown: ")
-        if num_str.isdigit():  # Check if the input consists only of digits
-            num = int(num_str)
-            if num >= 0:
-                countdown(num)
-                break  # Exit the loop if a valid non-negative number is entered
-            else:
-                print("Error")
+        if num_str.isdigit():
+            countdown(int(num_str))
+            break
         else:
             print("Error")
 
 run_countdown_program()
+
